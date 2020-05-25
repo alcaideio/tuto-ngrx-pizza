@@ -1,9 +1,4 @@
-import {
-  Component,
-  Input,
-  forwardRef,
-  ChangeDetectionStrategy,
-} from '@angular/core';
+import { ChangeDetectionStrategy, Component, forwardRef, Input } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { Topping } from '../../models/topping.model';
 
