@@ -1,24 +1,9 @@
-import {
-  Component,
-  Input,
-  Output,
-  EventEmitter,
-  OnChanges,
-  SimpleChanges,
-  ChangeDetectionStrategy,
-} from '@angular/core';
-import {
-  FormControl,
-  FormGroup,
-  FormArray,
-  FormBuilder,
-  Validators,
-} from '@angular/forms';
-
+import { Component, EventEmitter, Input, OnChanges, Output, SimpleChanges } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { map } from 'rxjs/operators';
-
 import { Pizza } from '../../models/pizza.model';
 import { Topping } from '../../models/topping.model';
+
 
 @Component({
   selector: 'pizza-form',
