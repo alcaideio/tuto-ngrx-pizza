@@ -19,4 +19,7 @@ export class LoadPizzasSuccess implements Action {
   constructor(public payload: Pizza[]) {}
 }
 
-export type PizzasAction = LoadPizzas | LoadPizzasFail | LoadPizzasSuccess;
+export type PizzasAction = 
+| LoadPizzas 
+| LoadPizzasFail 
+| LoadPizzasSuccess;
