@@ -13,19 +13,3 @@ export const reducers: ActionReducerMap<ProductsState> = {
 };
 
 export const getProductsState = createFeatureSelector<ProductsState>('products');
-
-////// utils
-
-export function createEntities<S, T>(state: S, list: Array<T>) {
-    return list.reduce(
-        (entities: { [id: number]: T }, item: any) => {
-            return {
-                ...entities,
-                [item.id]: item,
-            }
-        },
-        {
-            ...state.entities,
-        }
-    );
-}
