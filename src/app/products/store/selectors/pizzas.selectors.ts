@@ -1,10 +1,9 @@
 import { createSelector } from '@ngrx/store';
 import * as fromRoot from '../../../store';
 import { Pizza } from '../../models/pizza.model';
-import { Topping } from '../../models/topping.model';
 import * as fromFeature from '../reducers';
 import * as fromPizzas from '../reducers/pizzas.reducer';
-import * as fromToppings from '../reducers/toppings.reducers';
+import * as fromToppings from './toppings.selectors';
 
 export const getPizzaState = createSelector(
   fromFeature.getProductsState,
@@ -24,18 +23,15 @@ export const getSelectedPizza = createSelector(
   }
 );
 
-export const getPizzaVisualised = createSelector (
+export const getPizzaVisualised = createSelector(
   getSelectedPizza,
   fromToppings.getToppingEntities,
   fromToppings.getSelectedToppings,
-  (pizza, toppingsEntities, selectedToppings) => {
-    let toppings: Topping[]
-    !!toppings 
-      ? toppings = selectedToppings.map(id => toppingsEntities[id])
-      : toppings = []
-    return { ...pizza, toppings }
+  (pizza, toppingEntities, selectedToppings) => {    
+    const toppings = selectedToppings.map(id => toppingEntities[id]);
+    return { ...pizza, toppings };
   }
-)
+);
 
 export const getAllPizzas = createSelector(getPizzasEntities, entities => {
   return Object.keys(entities).map(id => entities[+id]);
