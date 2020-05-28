@@ -45,7 +45,6 @@ export class ProductItemComponent implements OnInit {
     );
     this.toppings$ = this.store.select(fromStore.getAllToppings);
     this.visualise$ = this.store.select(fromStore.getPizzaVisualised).pipe(take(1));
-    this.visualise$.subscribe(p => console.log(p))
   }
 
   onSelect(event: number[]) {

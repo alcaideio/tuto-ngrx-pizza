@@ -12,7 +12,7 @@ export const initialState: ToppingsState = {
   entities: {},
   loaded: false,
   loading: false,
-  selectedToppings: []
+  selectedToppings: [],
 };
 
 export function reducer(
@@ -21,13 +21,13 @@ export function reducer(
 ): ToppingsState {
   switch (action.type) {
     case fromToppings.VISUALISE_TOPPINGS: {
-        const selectedToppings = action.payload
-        return {
-            ...state,
-            selectedToppings,
-        };
+      const selectedToppings = action.payload;
+      return {
+        ...state,
+        selectedToppings,
+      };
     }
-    
+
     case fromToppings.LOAD_TOPPINGS: {
       return {
         ...state,
@@ -48,7 +48,7 @@ export function reducer(
           ...state.entities,
         }
       );
-    return {
+      return {
         ...state,
         loaded: true,
         loading: false,

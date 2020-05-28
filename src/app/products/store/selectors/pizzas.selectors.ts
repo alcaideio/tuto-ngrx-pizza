@@ -3,7 +3,7 @@ import * as fromRoot from '../../../store';
 import { Pizza } from '../../models/pizza.model';
 import * as fromFeature from '../reducers';
 import * as fromPizzas from '../reducers/pizzas.reducer';
-import * as fromToppings from '../reducers/toppings.reducers';
+import * as fromToppings from './toppings.selectors';
 
 export const getPizzaState = createSelector(
   fromFeature.getProductsState,
@@ -27,8 +27,7 @@ export const getPizzaVisualised = createSelector(
   getSelectedPizza,
   fromToppings.getToppingEntities,
   fromToppings.getSelectedToppings,
-  (pizza, toppingEntities, selectedToppings) => {
-    console.log(selectedToppings)
+  (pizza, toppingEntities, selectedToppings) => {    
     const toppings = selectedToppings.map(id => toppingEntities[id]);
     return { ...pizza, toppings };
   }
