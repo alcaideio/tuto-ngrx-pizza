@@ -50,20 +50,20 @@ import { Topping } from '../../models/topping.model';
             Create Pizza
           </button>
 
+        <button
+          type="button"
+          class="btn btn__warning"
+          *ngIf="exists"
+          (click)="removePizza(form)">
+          Delete Pizza
+        </button>
+
           <button
             type="button"
             class="btn btn__ok"
             *ngIf="exists"
             (click)="updatePizza(form)">
             Save changes
-          </button>
-
-          <button
-            type="button"
-            class="btn btn__warning"
-            *ngIf="exists"
-            (click)="removePizza(form)">
-            Delete Pizza
           </button>
         </div>
 
