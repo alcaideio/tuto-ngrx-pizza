@@ -1,4 +1,5 @@
 import { createSelector } from '@ngrx/store';
+import { sortByType } from '.';
 import * as fromRoot from '../../../store';
 import { Pizza } from '../../models/pizza.model';
 import * as fromFeature from '../reducers';
@@ -33,9 +34,15 @@ export const getPizzaVisualised = createSelector(
   }
 );
 
-export const getAllPizzas = createSelector(getPizzasEntities, entities => {
-  return Object.keys(entities).map(id => entities[+id]);
-});
+export const getAllPizzas = createSelector(
+  getPizzasEntities, 
+  entities => Object.keys(entities).map(id => entities[+id])
+);
+
+export const getAllPizzasByName = createSelector(
+  getAllPizzas, 
+  (pizzas) => sortByType(pizzas, 'name')
+)
 
 export const getPizzasLoaded = createSelector(
   getPizzaState,
