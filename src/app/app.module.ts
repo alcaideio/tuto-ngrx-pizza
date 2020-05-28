@@ -9,7 +9,7 @@ import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from 'src/environments/environment';
 import { AppComponent } from './app.component';
-import { CustomSerializer, reducers } from './store';
+import { CustomSerializer, effects, reducers } from './store';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'products' },
@@ -29,7 +29,7 @@ const routes: Routes = [
     BrowserAnimationsModule,
     StoreModule.forRoot(reducers),
     StoreRouterConnectingModule.forRoot(),
-    EffectsModule.forRoot([]),
+    EffectsModule.forRoot(effects),
     !environment.production ? StoreDevtoolsModule.instrument() : [],
   ],
   bootstrap: [AppComponent],
