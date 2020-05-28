@@ -51,14 +51,30 @@
   ],
   "pizzas": [
     {
-      "name": "Plain Ol' Pepperoni",
+      "name": "test",
       "toppings": [
+        {
+          "id": 2,
+          "name": "bacon"
+        },
+        {
+          "id": 7,
+          "name": "olive"
+        },
+        {
+          "id": 11,
+          "name": "sweetcorn"
+        },
         {
           "id": 10,
           "name": "pepperoni"
+        },
+        {
+          "id": 3,
+          "name": "basil"
         }
       ],
-      "id": 3
+      "id": 4
     }
   ]
 }
