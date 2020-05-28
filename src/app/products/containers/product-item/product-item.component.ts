@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import { take, tap } from 'rxjs/operators';
+import { tap } from 'rxjs/operators';
 import { Pizza } from '../../models/pizza.model';
 import { Topping } from '../../models/topping.model';
 import * as fromStore from '../../store';
@@ -44,7 +44,7 @@ export class ProductItemComponent implements OnInit {
       })
     );
     this.toppings$ = this.store.select(fromStore.getAllToppings);
-    this.visualise$ = this.store.select(fromStore.getPizzaVisualised).pipe(take(1));
+    this.visualise$ = this.store.select(fromStore.getPizzaVisualised);
   }
 
   onSelect(event: number[]) {
