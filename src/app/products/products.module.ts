@@ -7,6 +7,7 @@ import { EffectsModule } from '@ngrx/effects';
 import { StoreModule } from '@ngrx/store';
 import * as fromComponents from './components';
 import * as fromContainers from './containers';
+import * as fromGuards from './guards';
 import * as fromServices from './services';
 import { effects, reducers } from './store';
 
@@ -15,10 +16,12 @@ export const ROUTES: Routes = [
   {
     path: '',
     component: fromContainers.ProductsComponent,
+    canActivate: [fromGuards.PizzasGuard],
   },
   {
     path: 'new',
     component: fromContainers.ProductItemComponent,
+    canActivate: [fromGuards.PizzasGuard],
   },
   {
     path: ':pizzaId',
@@ -35,7 +38,7 @@ export const ROUTES: Routes = [
     StoreModule.forFeature('products', reducers),
     EffectsModule.forFeature(effects),
   ],
-  providers: [...fromServices.services],
+  providers: [...fromServices.services, ...fromGuards.guards],
   declarations: [...fromContainers.containers, ...fromComponents.components],
   exports: [...fromContainers.containers, ...fromComponents.components],
 })
