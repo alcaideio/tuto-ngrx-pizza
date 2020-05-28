@@ -72,19 +72,13 @@
         {
           "id": 3,
           "name": "basil"
+        },
+        {
+          "id": 12,
+          "name": "tomato"
         }
       ],
       "id": 4
-    },
-    {
-      "name": "aa",
-      "toppings": [
-        {
-          "id": 10,
-          "name": "pepperoni"
-        }
-      ],
-      "id": 5
     },
     {
       "name": "ccc",
