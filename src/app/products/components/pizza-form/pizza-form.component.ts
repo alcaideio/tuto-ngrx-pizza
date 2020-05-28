@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnChanges, Output, SimpleChanges } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnChanges, Output, SimpleChanges } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { map } from 'rxjs/operators';
 import { Pizza } from '../../models/pizza.model';
@@ -70,6 +70,7 @@ import { Topping } from '../../models/topping.model';
       </form>
     </div>
   `,
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PizzaFormComponent implements OnChanges {
   exists = false;
