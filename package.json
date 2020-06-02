@@ -6,7 +6,7 @@
     "start": "ng serve --aot",
     "start:all": "run-p api start",
     "build": "ng build",
-    "test": "ng test --watch false --browsers ChromeHeadless",
+    "test": "ng test --browsers ChromeHeadless",
     "test:show": "ng test",
     "format:fix": "pretty-quick --staged",
     "test:cov": "ng test --watch false --browsers ChromeHeadless --codeCoverage",
