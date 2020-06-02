@@ -6,6 +6,7 @@ import { RouterModule, Routes } from '@angular/router';
 import * as fromComponents from './components';
 import * as fromContainers from './containers';
 import { LoginPageComponent } from './containers/login-page/login-page.component';
+import * as fromServices from './services';
 
 const ROUTES: Routes = [
   { path: '', component: LoginPageComponent, data: { title: 'Login' } },
@@ -18,8 +19,8 @@ const ROUTES: Routes = [
     HttpClientModule,
     RouterModule.forChild(ROUTES),
   ],
-  providers: [],
+  providers: [...fromServices.services],
   declarations: [...fromContainers.containers, ...fromComponents.components],
   exports: [...fromContainers.containers, ...fromComponents.components],
 })
-export class AuthModule { }
+export class AuthModule {}
