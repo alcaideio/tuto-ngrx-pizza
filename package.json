@@ -4,6 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --aot",
+    "start:all": "run-p api start",
     "build": "ng build",
     "test": "ng test --watch false --browsers ChromeHeadless",
     "test:show": "ng test",
@@ -15,7 +16,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "run-s format:fix lint",
+      "pre-commit": "run-s format:fix",
       "pre-push": "npm test"
     }
   },
