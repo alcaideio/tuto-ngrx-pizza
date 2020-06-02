@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Credentials } from '../../models/user';
+import { AuthService } from '../../services';
 @Component({
   selector: 'app-login-page',
   styleUrls: ['./login-page.component.scss'],
@@ -7,19 +9,20 @@ import { Credentials } from '../../models/user';
     <h1>Login</h1>
     <login-form
       (login)="onLogin($event)"
-      [errorMessage]="errorMessage"
+      [errorMessage]="error$ | async"
     ></login-form>
   `,
 })
 export class LoginPageComponent implements OnInit {
-  errorMessage = 'test';
+  error$: Observable<string>;
 
-  constructor() {}
+  constructor(private authService: AuthService) {}
 
   ngOnInit(): void {}
 
-  onLogin(event: Credentials) {
-    // this.store.dispatch(new fromStore.CreatePizza(event));
-    console.log('onLogin', event);
+  onLogin(credentials: Credentials) {
+    // this.store.dispatch(LoginPageActions.login({ credentials }));
+    this.authService.login(credentials);
+    console.log(credentials);
   }
 }

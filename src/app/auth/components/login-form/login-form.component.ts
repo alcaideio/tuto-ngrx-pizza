@@ -34,9 +34,7 @@ export class LoginFormComponent implements OnInit {
     );
   }
 
-  ngOnInit(): void {
-    console.log(this.errorMessage);
-  }
+  ngOnInit(): void {}
 
   onSubmit(form: FormGroup) {
     const { value, valid } = form;
