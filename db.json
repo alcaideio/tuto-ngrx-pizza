@@ -84,10 +84,6 @@
           "name": "anchovy"
         },
         {
-          "id": 11,
-          "name": "sweetcorn"
-        },
-        {
           "id": 5,
           "name": "mozzarella"
         },
@@ -98,6 +94,10 @@
         {
           "id": 8,
           "name": "onion"
+        },
+        {
+          "id": 2,
+          "name": "bacon"
         }
       ],
       "id": 14
