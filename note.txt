@@ -1,1 +1,0 @@
-Ajout de Jest tutu ici : https://blog.ineat-group.com/2019/04/angular-remplacer-karma-jasmine-par-jest/
