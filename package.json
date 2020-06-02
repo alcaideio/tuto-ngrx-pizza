@@ -18,7 +18,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "format:fix",
+      "pre-commit": "",
       "pre-push": ""
     }
   },

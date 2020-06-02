@@ -1,0 +1,39 @@
+<form [formGroup]="form">
+  <p *ngIf="errorMessage" class="loginError">
+    {{ errorMessage }}
+  </p>
+  <label>
+    <h4>Email</h4>
+    <input
+      type="text"
+      formControlName="username"
+      placeholder="johndoe@email.com"
+      class="login-form__input"
+      [class.error]="usernameControlInvalid"
+    />
+    <div class="login-form__error" *ngIf="usernameControlInvalid">
+      <p>It must be a valid name</p>
+    </div>
+  </label>
+
+  <label>
+    <h4>Password</h4>
+    <input
+      type="password"
+      formControlName="password"
+      class="login-form__input"
+    />
+  </label>
+
+  <div class="login-form__actions">
+    <button
+      [disabled]="errorMessage"
+      [class.disabled]="errorMessage"
+      type="button"
+      class="btn btn__ok"
+      (click)="onSubmit(form)"
+    >
+      Login
+    </button>
+  </div>
+</form>

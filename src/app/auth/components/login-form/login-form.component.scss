@@ -1,0 +1,15 @@
+.loginError {
+  padding: 16px;
+  width: 300px;
+  color: white;
+  background-color: #999;
+}
+
+.login-form__actions {
+  button {
+    &.disabled {
+      background-color: #999;
+      cursor: not-allowed;
+    }
+  }
+}
