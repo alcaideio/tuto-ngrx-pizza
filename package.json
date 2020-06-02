@@ -12,12 +12,14 @@
     "test:cov": "ng test --watch false --browsers ChromeHeadless --codeCoverage",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "api": "json-server --watch db.json"
+    "api": "json-server --watch db.json",
+    "cypress": "run-p start:all cypress:open",
+    "cypress:open": "npx cypress open"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "run-s format:fix",
-      "pre-push": "npm test"
+      "pre-commit": "format:fix",
+      "pre-push": ""
     }
   },
   "private": true,
@@ -47,6 +49,7 @@
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "^12.11.1",
     "codelyzer": "^5.1.2",
+    "cypress": "^4.7.0",
     "husky": "^4.2.5",
     "jasmine-core": "~3.5.0",
     "jasmine-spec-reporter": "~4.2.1",

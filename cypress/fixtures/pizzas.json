@@ -1,0 +1,9 @@
+{
+  "id": "1",
+  "name": "Pizza #1",
+  "toppings": [
+    { "id": 1, "name": "bacon" },
+    { "id": 2, "name": "pepperoni" },
+    { "id": 3, "name": "tomato" }
+  ]
+}
