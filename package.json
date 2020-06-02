@@ -9,7 +9,7 @@
     "test": "ng test --watch false --browsers ChromeHeadless",
     "test:show": "ng test",
     "format:fix": "pretty-quick --staged",
-    "test:coverage": "ng test --watch false --browsers ChromeHeadless --codeCoverage",
+    "test:cov": "ng test --watch false --browsers ChromeHeadless --codeCoverage",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "api": "json-server --watch db.json"
@@ -34,6 +34,7 @@
     "@ngrx/router-store": "^9.1.2",
     "@ngrx/store": "^9.1.2",
     "@ngrx/store-devtools": "^9.1.2",
+    "jasmine-marbles": "^0.6.0",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
