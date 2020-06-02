@@ -51,64 +51,82 @@
   ],
   "pizzas": [
     {
-      "name": "test",
+      "name": "Pizza title updated",
       "toppings": [
-        {
-          "id": 2,
-          "name": "bacon"
-        },
-        {
-          "id": 7,
-          "name": "olive"
-        },
-        {
-          "id": 11,
-          "name": "sweetcorn"
-        },
-        {
-          "id": 10,
-          "name": "pepperoni"
-        },
-        {
-          "id": 3,
-          "name": "basil"
-        },
-        {
-          "id": 12,
-          "name": "tomato"
-        },
-        {
-          "id": 9,
-          "name": "pepper"
-        }
-      ],
-      "id": 4
-    },
-    {
-      "name": "test",
-      "toppings": [
-        {
-          "id": 2,
-          "name": "bacon"
-        },
-        {
-          "id": 11,
-          "name": "sweetcorn"
-        },
-        {
-          "id": 12,
-          "name": "tomato"
-        },
         {
           "id": 1,
           "name": "anchovy"
         },
         {
-          "id": 6,
-          "name": "mushroom"
+          "id": 11,
+          "name": "sweetcorn"
+        },
+        {
+          "id": 2,
+          "name": "bacon"
+        },
+        {
+          "id": 9,
+          "name": "pepper"
+        },
+        {
+          "id": 10,
+          "name": "pepperoni"
         }
       ],
-      "id": 5
+      "id": 6
+    },
+    {
+      "name": "Pizza title updated",
+      "toppings": [
+        {
+          "id": 1,
+          "name": "anchovy"
+        },
+        {
+          "id": 11,
+          "name": "sweetcorn"
+        },
+        {
+          "id": 5,
+          "name": "mozzarella"
+        },
+        {
+          "id": 6,
+          "name": "mushroom"
+        },
+        {
+          "id": 8,
+          "name": "onion"
+        }
+      ],
+      "id": 14
+    },
+    {
+      "name": "Super pizza title",
+      "toppings": [
+        {
+          "id": 1,
+          "name": "anchovy"
+        },
+        {
+          "id": 5,
+          "name": "mozzarella"
+        },
+        {
+          "id": 6,
+          "name": "mushroom"
+        },
+        {
+          "id": 8,
+          "name": "onion"
+        },
+        {
+          "id": 11,
+          "name": "sweetcorn"
+        }
+      ],
+      "id": 15
     }
   ]
 }
