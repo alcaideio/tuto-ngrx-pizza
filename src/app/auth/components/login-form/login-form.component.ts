@@ -14,6 +14,14 @@ import { Credentials } from '../../models/user';
 })
 export class LoginFormComponent implements OnInit {
   @Input() errorMessage: string | null;
+  @Input()
+  set pending(isPending: boolean) {
+    if (isPending) {
+      this.form.disable();
+    } else {
+      this.form.enable();
+    }
+  }
 
   @Output() login = new EventEmitter<Credentials>();
 
