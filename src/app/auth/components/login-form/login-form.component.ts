@@ -14,20 +14,12 @@ import { Credentials } from '../../models/user';
 })
 export class LoginFormComponent implements OnInit {
   @Input() errorMessage: string | null;
-  @Input()
-  set pending(isPending: boolean) {
-    if (isPending) {
-      this.form.disable();
-    } else {
-      this.form.enable();
-    }
-  }
 
   @Output() login = new EventEmitter<Credentials>();
 
   form = this.fb.group({
-    username: ['janedoe', Validators.required],
-    password: ['passdeouf', Validators.required],
+    username: ['test', Validators.required],
+    password: ['test', Validators.required],
   });
 
   constructor(private fb: FormBuilder) {}

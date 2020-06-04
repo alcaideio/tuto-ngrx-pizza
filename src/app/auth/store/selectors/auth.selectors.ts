@@ -21,7 +21,3 @@ export const selectLoginPageError = createSelector(
   selectLoginPageState,
   fromLoginPage.getError
 );
-export const selectLoginPagePending = createSelector(
-  selectLoginPageState,
-  fromLoginPage.getPending
-);
