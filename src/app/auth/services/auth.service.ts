@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable, of, throwError } from 'rxjs';
-import { Credentials, User } from '../models';
+import { Credentials, User } from '../models/user';
 
 @Injectable({
   providedIn: 'root',
@@ -8,16 +8,16 @@ import { Credentials, User } from '../models';
 export class AuthService {
   constructor() {}
 
-  login({ username, password }: Credentials): Observable<User> {
+  login(credentials: Credentials): Observable<User> {
     /**
      * Simulate a failed login to display the error
      * message for the login form.
      */
-    if (username !== 'test' && username !== 'tim') {
+    if (credentials.username.length < 2 && credentials.password !== 'test') {
       return throwError('Invalid username or password');
+    } else {
+      return of({ name: credentials.username });
     }
-
-    return of({ name: 'User' });
   }
 
   logout() {
